@@ -10,11 +10,12 @@ import Navbar from './Components/Navbar/Navbar'
 function App() {
 
   return (
-    <div>
+    <div >
+      
       <BrowserRouter>
-        <Navbar />
-        
+      <Navbar  />
         <Routes>
+        
           <Route path='/' element={<Home />} />
           <Route exact path='/about' element={<About />} />
           <Route exact path='socialmedia' element={<SocialMedia />} />
