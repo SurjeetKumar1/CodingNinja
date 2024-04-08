@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Page5card = (props) => {
+    console.log(props)
     const data=props.data;
     console.log(data);
   return (
