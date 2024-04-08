@@ -6,7 +6,7 @@ const Page1 = () => {
     return (
         <div className='flex justify-between item-center mt-14 pr-[6rem] pl-8' >
         <div>
-            <div className=' text-5xl font-bold'>
+            <div className=' text-5xl font-bold ' style={{ lineHeight: '1.3' }}>
                 Welcome To <span className=' text-orange-600'>Coding  Ninjas</span> <br />Student Chapter Of <br />central University Of Haryana
             </div>
             <div className=' mt-4'>
