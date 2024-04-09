@@ -15,7 +15,7 @@ const CardPage5 = ({ teamdata, layoutKey }) => {
                             <div key={index} className='w-96 border-solid border-[1px] border-[#CBC3C3] p-10 flex flex-col items-center rounded-3xl mt-40'>
                                 <div className='p-[0.6rem] bg-[#F66C3B] rounded-full relative top-[-9rem]'>
                                     <div className="rounded-full overflow-hidden w-52 h-52">
-                                        <img className="" src={data.img} alt="TeamleaderImg" />
+                                        <img className=" w-full h-full object-cover" src={data.img} alt="TeamleaderImg" />
                                     </div>
                                 </div>
                                 <div className='flex flex-col items-center gap-2 mt-[-8rem]'>
@@ -38,7 +38,7 @@ const CardPage5 = ({ teamdata, layoutKey }) => {
                                 <div key={index} className='w-96 border-solid border-[1px] border-[#CBC3C3] p-10 flex flex-col items-center rounded-3xl mt-40'>
                                     <div className='p-[0.6rem] bg-[#F66C3B] rounded-full relative top-[-9rem]'>
                                         <div className="rounded-full overflow-hidden w-52 h-52">
-                                            <img className="" src={data.img} alt="TeamleaderImg" />
+                                            <img className=" w-full h-full object-cover" src={data.img} alt="TeamleaderImg" />
                                         </div>
                                     </div>
                                     <div className='flex flex-col items-center gap-2 mt-[-8rem]'>
