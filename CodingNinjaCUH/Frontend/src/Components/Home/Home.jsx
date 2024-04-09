@@ -6,6 +6,7 @@ import Page4 from '../../Screen/Page4'
 import Page5 from '../../Screen/Page5'
 import Page6 from '../../Screen/Page6'
 import Footer from '../../Screen/Footer'
+import FAQ from '../../Screen/FAQSection/FAQ'
 
 const Home = () => {
   return (
@@ -15,7 +16,8 @@ const Home = () => {
       <Page3/>
       <Page4/>
       <Page5/>
-      <Page6/>
+      {/* <Page6/> */}
+      <FAQ/>
       <Footer/>
     </div>
   )
