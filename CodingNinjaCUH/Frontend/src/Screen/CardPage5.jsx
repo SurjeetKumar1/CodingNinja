@@ -6,13 +6,13 @@ const CardPage5 = ({ teamdata, layoutKey }) => {
         <div>
             {layoutKey === 1 ? (
                 <div>
-                    <div className='flex flex-col items-center text-5xl font-bold'>
+                    <div className='flex flex-col items-center sm:text-5xl text-3xl font-bold'>
                         <h1> <span className='text-[#F66C3B]'>Our</span> Team</h1>
-                        <div className="border-b border-white w-96 mt-4"></div>
+                        <div className="border-b border-white sm:w-96 w-52 mt-4"></div>
                     </div>
-                    <div className='flex flex-wrap justify-between pr-4 pl-4'>
+                    <div className='flex flex-wrap sm:justify-between pr-4 pl-4 '>
                         {teamdata.map((data, index) => (
-                            <div key={index} className='w-96 border-solid border-[1px] border-[#CBC3C3] p-10 flex flex-col items-center rounded-3xl mt-40'>
+                            <div key={index} className='sm:w-96 w-[100%] border-solid border-[1px] border-[#CBC3C3] p-10 flex flex-col items-center rounded-3xl mt-40'>
                                 <div className='p-[0.6rem] bg-[#F66C3B] rounded-full relative top-[-9rem]'>
                                     <div className="rounded-full overflow-hidden w-52 h-52">
                                         <img className=" w-full h-full object-cover" src={data.img} alt="TeamleaderImg" />
@@ -29,9 +29,9 @@ const CardPage5 = ({ teamdata, layoutKey }) => {
             ) : (
                 layoutKey === 2 && (
                     <div className=' mt-40'>
-                        <div className='flex flex-col items-center text-5xl font-bold'>
+                        <div className='flex flex-col items-center sm:text-5xl text-3xl font-bold'>
                             <h1> <span className='text-[#F66C3B]'>Our</span> Mentor & Former Leads</h1>
-                            <div className="border-b border-white w-[55%] mt-4"></div>
+                            <div className="border-b border-white sm:w-[55%] w-[100%] mt-4"></div>
                         </div>
                         <div className='flex flex-wrap justify-center gap-16 pr-4 pl-4'>
                             {teamdata.map((data, index) => (

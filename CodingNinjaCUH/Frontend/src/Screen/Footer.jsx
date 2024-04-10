@@ -5,9 +5,9 @@ const Footer = () => {
     return (
         <>
         <div className='border-b border-[#A59D9D] w-full mb-28 mt-16' ></div>
-        <div className='flex justify-between pr-40 pl-40'>
+        <div className='flex sm:justify-between flex-col sm:flex-row sm:pr-40 pr-16 pl-16 ms:gap-1 gap-8 sm:pl-40'>
             <div className=''>
-                <div className=' text-2xl font-bold mb-2'>@coding.ninja_cuh</div>
+                <div className=' sm:text-2xl text-xl font-bold mb-2'>@coding.ninja_cuh</div>
                 <div className='mb-2 text-[#A59D9D]'>codingninja@cug.ac.in</div>
                 <div className='mb-2 text-[#A59D9D]'>Central University of Haryana, Jant-Pali, Mahenderagarh Haryana Pin:
                     123031 </div>
@@ -24,8 +24,8 @@ const Footer = () => {
             </div>
 
             <div className=''>
-                <h1 className='text-2xl font-bold mb-4'>know More</h1>
-                <ul className='text-[#A59D9D] flex flex-col gap-4 text-xl font-semibold cursor-pointer'>
+                <h1 className='sm:text-2xl text-xl font-bold sm:mb-4 mb-2'>know More</h1>
+                <ul className='text-[#A59D9D] flex flex-col sm:gap-4 gap-2 sm:text-xl text-lg font-semibold cursor-pointer'>
                     <li>About Us</li>
                     <li>Events</li>
                     <li>Gellery</li>
@@ -34,8 +34,8 @@ const Footer = () => {
             </div>
 
             <div >
-                <h1 className='text-2xl font-bold mb-4'>Other Links</h1>
-                <ul className='text-[#A59D9D] flex flex-col gap-4 text-xl font-semibold cursor-pointer'>
+                <h1 className='sm:text-2xl text-xl font-bold sm:mb-4 mb-2'>Other Links</h1>
+                <ul className='text-[#A59D9D] flex flex-col sm:gap-4 gap-2 sm:text-xl text-lg font-semibold cursor-pointer'>
                     <li>Terms & condition</li>
                     <li>Privacy policy</li>
                     <li>Contact Us</li>
@@ -46,7 +46,7 @@ const Footer = () => {
 
         <div className='border-b border-[#A59D9D] w-full mt-20' ></div>
         <div className='text-center mt-4 mb-20'>
-            <div className='text-2xl text-[#A59D9D]'>All Rights are reserved</div>
+            <div className='sm:text-2xl text-xl text-[#A59D9D]'>All Rights are reserved</div>
         </div>
         </>
     )

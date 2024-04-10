@@ -38,10 +38,10 @@ const Page3 = () => {
     ];
     return (
         <div className='mt-24'>
-            <div className='text-6xl font-bold text-center' style={{ lineHeight: '1.3' }}>
+            <div className='sm:text-6xl font-bold text-center' style={{ lineHeight: '1.3' }}>
                 Events We <span className='text-[#F66C3B]'>Organize</span><br /> for you!
             </div>
-            <div className=' mr-16 ml-16 flex flex-wrap items-center justify-center gap-16  mt-8'>
+            <div className=' mr-16 ml-16 flex sm:flex-wrap flex-col sm:flex-row items-center justify-center sm:gap-16 gap-4  mt-8'>
             {Eventsdata.map((data, index) => (
                <Page3card data={data}/>
             ))}
