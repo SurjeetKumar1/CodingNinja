@@ -7,7 +7,7 @@ const FAQ = () => {
             <div className='mt-40'>
                 <div className=' flex flex-col justify-center items-center'>
                     <div className=' sm:text-5xl text-3xl font-bold'>FAQ</div>
-                    <div className=' sm:w-36 w-24 border-b  border-white mt-4'></div>
+                    <div className=' sm:w-36 w-24 border-b  dark:border-white border-slate-900  mt-4'></div>
                 </div>
             </div>
 

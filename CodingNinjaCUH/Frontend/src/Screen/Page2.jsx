@@ -15,9 +15,9 @@ const Page2 = () => {
             At Coding Ninja, WE Firmly believe in the inheritence unique of every individual,recognizing thateach person harbords their own set of talents waiting to be discoverd.Our mission is to offer pathways for skill enhancement and self-discovery,empowering students to unlock their full potential.through active learning experiance and foastring meaningful connections,we create enviroments where students can thrive and excel.
         </div>
         <div className=' mt-4 flex flex-col gap-4'>
-            <div className=' w-full border-solid  border-[1.5px]  border-white sm:text-2xl text-[1.1rem] font-semibold p-3  rounded-md flex gap-4 justify-start items-center' > <BsCheckCircle className='mt-2'/>Become Ready For Industry With us</div>
-            <div  className=' w-full border-solid  border-[1.5px]   border-white sm:text-2xl text-[1.1rem] font-semibold p-3 rounded-md flex gap-4 justify-start items-center'> <BsCheckCircle className='mt-2'/>Regular competition/events</div>
-            <div  className=' w-full border-solid  border-[1.5px]   border-white sm:text-2xl text-[1.1rem] font-semibold p-3 rounded-md flex gap-4 justify-start items-center'><BsCheckCircle className='mt-2' />ready to learn and earn</div>
+            <div className=' w-full border-solid  border-[1.5px]  dark:border-white border-slate-900 sm:text-2xl text-[1.1rem] font-semibold p-3  rounded-md flex gap-4 justify-start items-center' > <BsCheckCircle className='mt-2'/>Become Ready For Industry With us</div>
+            <div  className=' w-full border-solid  border-[1.5px]   dark:border-white border-slate-900 sm:text-2xl text-[1.1rem] font-semibold p-3 rounded-md flex gap-4 justify-start items-center'> <BsCheckCircle className='mt-2'/>Regular competition/events</div>
+            <div  className=' w-full border-solid  border-[1.5px]   dark:border-white border-slate-900 sm:text-2xl text-[1.1rem] font-semibold p-3 rounded-md flex gap-4 justify-start items-center'><BsCheckCircle className='mt-2' />ready to learn and earn</div>
         </div>
       </div>
     </div>

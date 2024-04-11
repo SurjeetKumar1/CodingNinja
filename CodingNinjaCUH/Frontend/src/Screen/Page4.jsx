@@ -12,7 +12,7 @@ const Page4 = () => {
                     <div className=' sm:text-5xl text-2xl font-bold ' style={{ lineHeight: '1.3' }}>
                         Diligence paves the path to <span className=' text-[#F66C3B]'>success !</span>
                     </div>
-                    <div className=' mt-4 sm:text-xl text-base text-[#CECCCC]' style={{ lineHeight: "1.2" }}>
+                    <div className=' mt-4 sm:text-xl text-base dark:text-[#CECCCC] text-slate-800' style={{ lineHeight: "1.2" }}>
                         The coding Ninja CUH has various people working in different teams according  to their skill set.Here are the different  teams from the club :organizing team ,Content team,Social Media Team,Web team.teachnical team,promotion team,promotion team ,community coordinator,compititive programming team,video Editing team.
                     </div>
                     <div className=' mt-16'>

@@ -10,7 +10,7 @@ import Navbar from './Components/Navbar/Navbar'
 function App() {
 
   return (
-    <div >
+    <div className=" dark:bg-[#2B2A2A] bg-gray-50 dark:text-white text-slate-900" >
       
       <BrowserRouter>
       <Navbar  />

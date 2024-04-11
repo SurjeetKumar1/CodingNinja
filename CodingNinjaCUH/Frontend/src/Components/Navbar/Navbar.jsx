@@ -13,38 +13,28 @@ const Navbar = () => {
     const element = document.documentElement;
 
     const [theme, setTheme] = useState(() => {
-        const storedTheme = localStorage.getItem("theme");
-        if (storedTheme) {
-            return storedTheme;
-        } else {
-            const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            return prefersDarkMode ? "dark" : "light";
-        }
+        return localStorage.getItem("theme") || "dark";
     });
+    
+    // const [theme, setTheme] = useState("dark");
+    
+    console.log("theme is",theme)
 
+    // match karega desktop ki theme aur light ki theme  
     const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    // console.log(darkQuery)
 
-    useEffect(() => {
-        function onWindowMatch(e) {
-            if (!localStorage.getItem("theme")) {
-                if (e.matches) {
-                    element.classList.add("dark");
-                    setTheme("dark");
-                    localStorage.setItem('theme', 'dark'); // Save theme to local storage
-                } else {
-                    element.classList.remove("dark");
-                    setTheme("light");
-                    localStorage.setItem('theme', 'light'); // Save theme to local storage
-                }
-            }
+    function onWindowMatch() {
+        if (localStorage.theme === 'dark' || (!("theme" in localStorage) && darkQuery.matches)) {
+            element.classList.add("dark")
         }
+        else {
+            element.classList.remove("dark");
+        }
+    }
 
-        darkQuery.addEventListener("change", onWindowMatch);
+    onWindowMatch()
 
-        return () => {
-            darkQuery.removeEventListener("change", onWindowMatch);
-        };
-    }, [element, darkQuery]); // Include all dependencies
 
     useEffect(() => {
         switch (theme) {
@@ -56,33 +46,39 @@ const Navbar = () => {
                 element.classList.remove("dark");
                 localStorage.setItem('theme', 'light');
                 break;
-            case "system":
-                if (darkQuery.matches) {
-                    element.classList.add("dark");
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    element.classList.remove("dark");
-                    localStorage.setItem('theme', 'light');
-                }
-                break;
+
             default:
                 localStorage.removeItem("theme");
+                onWindowMatch()
                 break;
         }
-    }, [theme, darkQuery, element]); // Include all dependencies
+    }, [theme]); // Include all dependencies
 
+
+    // set theme
     const handleThemeChange = (selectedTheme) => {
         setTheme(selectedTheme);
     };
 
+    darkQuery.addEventListener("change", (e) => {
+        if (!localStorage.getItem("theme")) {
+            if (e.matches) {
+                element.classList.add("dark");
+            }
+            else {
+                element.classList.remove("dark");
+            }
+        }
+    });
+
     const option = [
         {
             icon: <MdOutlineLightMode />,
-            text: "Light"
+            text: "light"
         },
         {
             icon: <MdDarkMode />,
-            text: "Dark"
+            text: "dark"
         },
         {
             icon: <IoDesktopOutline />,
@@ -124,21 +120,21 @@ const Navbar = () => {
                     </Link>
                 </ul>
                 <Link to="contactus">
-                    <Button style={{ background: "#F66C3B", width:"9rem",height:"3.5rem", fontWeight: "700", borderRadius: "0.7rem" ,marginLeft:"5rem"}} variant="contained">
+                    <Button style={{ background: "#F66C3B", width: "9rem", height: "3.5rem", fontWeight: "700", borderRadius: "0.7rem", marginLeft: "5rem" }} variant="contained">
                         Contact Us
                     </Button>
                 </Link>
             </div>
-            <div className='flex dark:bg-slate-900 bg-gray-100 rounded'>
+            <div className='flex dark:bg-slate-900 bg-gray-300  rounded'>
                 <div className="" onClick={() => setToggle(!toggle)}>
                     <button className={`w-8 h-8 leading-9 text-xl rounded-full m-1 flex items-center justify-center `}>
                         {(theme === "light") ? <MdOutlineLightMode /> : (theme === "dark") ? <MdDarkMode /> : <IoDesktopOutline />}
                     </button>
                 </div>
-                <div className={` bg-slate-900 absolute top-[5.5rem] sm:right-7 right-2 border-[1px] rounded-lg border-orange-600 p-2 ${(toggle) ? "block" : "hidden"}`}>
+                <div className={`bg-slate-200 dark:bg-slate-900 absolute top-[5.5rem] sm:right-7 right-2 border-[1px] rounded-lg border-orange-600 p-2 ${(toggle) ? "block" : "hidden"}`}>
                     {option.map(opt => (
                         <div
-                            className={`flex gap-5 sm:text-base text-sm justify-start items-center text-center p-1 min-w-full cursor-pointer hover:bg-gray-700 rounded-sm ${theme === opt.text ? "text-orange-600" : ""}`}
+                            className={`flex gap-5 sm:text-base text-sm justify-start items-center text-center p-1 min-w-full cursor-pointer hover:bg-gray-700 capitalize rounded-sm ${theme === opt.text ? "text-orange-600" : ""}`}
                             key={opt.text}
                             onClick={() => handleThemeChange(opt.text)}
                             role="button" // Accessibility improvement

@@ -12,7 +12,7 @@ const Accordion = ({tittle,answer}) => {
     };
 
     return (
-        <div className=' px-0 py-4 border-b border-white mb-2'>
+        <div className=' px-0 py-4 border-b dark:border-white border-slate-900  mb-2'>
         <div className='py-2 '>
             <button  className='flex justify-between w-full' onClick={toggleAccordion}>
                 <span className='sm:text-2xl text-lg text-start font-semibold'>{tittle}</span>
