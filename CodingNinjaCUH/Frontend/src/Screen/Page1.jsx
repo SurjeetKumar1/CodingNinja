@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Ninjaimg from "./ninjaImg.png"
 const Page1 = () => {
     return (
-        <div className='flex flex-col  sm:flex-row justify-center sm:justify-between  item-center mt-14 pr-[6rem] pl-8' >
+        <div className='flex flex-col  sm:flex-row justify-center sm:justify-between  item-center mt-14 sm:pr-[6rem] sm:pl-8 pr-8 pl-8 sm:gap-0 gap-8' >
             <div className='sm:w-[60%] w-full'>
                 <div className=' sm:text-5xl text-lg font-bold  ' style={{ lineHeight: '1.3' }}>
                     Welcome To <span className=' text-orange-600'>Coding  Ninjas</span> Student Chapter Of<br/> central University Of Haryana
